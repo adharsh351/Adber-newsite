@@ -26,14 +26,53 @@
     }
   </style>
 </head>
-<body>
-  <h1>Adber technologies 
-       thank you for visiting our page created and maintained by adharsh
+Thanks for sharing the code screenshot! The reason your “additional text” isn’t showing properly is because of incorrect HTML structure — specifically:
+
+
+---
+
+❌ Current problem:
+
+<h1>Adber technologies
+    thank you for visiting our page created by adharsh
     more features coming soon </h1>
-  <h2>creted and maintained by adharsh </h2>
+
+You're putting all your sentences inside an <h1> tag. That’s not how it's meant to work — HTML treats it as one single heading line, so it ignores line breaks or formats badly.
+
+
+---
+
+✅ Here's how to fix it:
+
+Replace:
+
+<h1>Adber technologies
+    thank you for visiting our page created by adharsh
+    more features coming soon </h1>
+
+With:
+
+<h1>Adber technologies</h1>
+<p>Thank you for visiting our page created by Adharsh.</p>
+<p>More features coming soon.</p>
+
+This uses <p> tags (paragraphs) for proper formatting.
+
+
+---
+
+✅ Final Improved Code Snippet:
+
+Here's the cleaned-up version of your HTML (just the body part):
+
+<body>
+  <h1>Adber technologies</h1>
+  <p>Thank you for visiting our page created by Adharsh.</p>
+  <p>More features coming soon.</p>
+
+  <h2>Created and maintained by Adharsh</h2>
   <ul>
-    <li>only snake games available for now</li>
-  </u1>
-     
-</body> 
+    <li>Only snake games available for now</li>
+  </ul>
+</body>
 </html>
